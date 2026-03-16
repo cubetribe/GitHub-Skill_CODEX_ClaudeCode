@@ -7,6 +7,17 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-03-16
+
+### Added
+
+- Copy-ready installation prompt at the top of the README for local coding assistants.
+- Standalone prompt file under `prompts/install-github-master-skill.md` with standard, Codex-only, and Claude Code-only variants.
+
+### Changed
+
+- README onboarding flow now points users directly to clone-plus-install instructions for AI-assisted setup.
+
 ## [0.1.0] - 2026-03-16
 
 ### Added

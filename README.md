@@ -4,6 +4,16 @@ An open-source GitHub governance skill for small teams that work with a live `ma
 
 Created by Dennis Westermann.
 
+## Copy-Paste Prompt
+
+Give this prompt to your local coding assistant if you want it to clone this repository and install the skill automatically:
+
+```text
+Clone https://github.com/cubetribe/GitHub-Skill_CODEX_ClaudeCode.git into a sensible local workspace folder on this machine. Then enter the repository root and run ./scripts/install-skill-locally.sh so the github-master skill is installed into ~/.codex/skills/github-master and ~/.claude/skills/github-master. After installation, verify that both target folders contain SKILL.md, agents/openai.yaml, references/, assets/, and scripts/repo_preflight.py. Report the local clone path, the install result for Codex and Claude Code, and any missing prerequisites. Do not push anything to GitHub.
+```
+
+A standalone shareable version of the same prompt lives in [`prompts/install-github-master-skill.md`](./prompts/install-github-master-skill.md).
+
 ## Why this repository exists
 
 Small teams usually do not need a heavy branching model. They need a safe one.
@@ -23,7 +33,8 @@ The skill is designed for Codex and Claude Code local skill directories and incl
 
 - canonical skill source in [`.agents/skills/github-master`](./.agents/skills/github-master)
 - local installer for Codex and Claude Code in [`scripts/install-skill-locally.sh`](./scripts/install-skill-locally.sh)
-- research and workflow reports in [`reports/v0.1.0`](./reports/v0.1.0)
+- shareable installation prompt in [`prompts/install-github-master-skill.md`](./prompts/install-github-master-skill.md)
+- research and workflow reports in [`reports/`](./reports)
 - repository standards for open-source collaboration
 
 ## Recommended workflow
@@ -68,7 +79,8 @@ On this machine, the Claude Code local skill path is `~/.claude/skills`.
 ```text
 .agents/skills/github-master/   Canonical skill source
 .github/                        Repo-level pull request and CI standards
-reports/v0.1.0/                 Research, architecture, build, validation, release reports
+prompts/                        Copy-ready prompts for coding assistants
+reports/vX.Y.Z/                 Research, architecture, build, validation, release reports
 scripts/                        Local installation helpers
 ```
 

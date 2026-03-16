@@ -32,5 +32,6 @@ jobs:
           test -f CHANGELOG.md
           test -f VERSION
           test -f CODEOWNERS
+          test -f prompts/install-github-master-skill.md
           test -f .agents/skills/github-master/SKILL.md
           test -f .agents/skills/github-master/agents/openai.yaml
