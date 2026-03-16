@@ -4,7 +4,7 @@
 
 - `release_impact`: `minor`
 - `candidate_next_version`: `0.1.0`
-- `build_id`: `codex/feat/github-master-skill-4610295`
+- `build_id`: `codex/feat/github-master-skill-da66a08`
 
 ## Rationale
 
