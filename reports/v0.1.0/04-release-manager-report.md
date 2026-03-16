@@ -4,13 +4,14 @@
 
 - `release_impact`: `minor`
 - `candidate_next_version`: `0.1.0`
-- `build_id`: `codex/feat/github-master-skill-da66a08`
+- `build_id`: `codex/feat/github-master-skill-4610295`
 
 ## Rationale
 
 - The repository was empty, so this change is the first functional public release.
 - The work adds a new reusable skill, installation flow, documentation, CI validation, and governance references.
 - No existing public API, schema, or CLI contract was broken.
+- The build ID is pinned to the main implementation commit so later documentation-only bookkeeping commits do not change the release snapshot identifier.
 
 ## Manual release workflow
 
