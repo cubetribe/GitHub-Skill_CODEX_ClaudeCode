@@ -1,0 +1,36 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check installer shell syntax
+        run: bash -n scripts/install-skill-locally.sh
+
+      - name: Run installer dry-run
+        run: ./scripts/install-skill-locally.sh --dry-run
+
+      - name: Run repo preflight
+        run: python3 .agents/skills/github-master/scripts/repo_preflight.py --path . --task "Validate the GitHub Master Skill repository"
+
+      - name: Verify required files
+        run: |
+          test -f README.md
+          test -f CHANGELOG.md
+          test -f VERSION
+          test -f CODEOWNERS
+          test -f .agents/skills/github-master/SKILL.md
+          test -f .agents/skills/github-master/agents/openai.yaml

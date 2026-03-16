@@ -1,0 +1,12 @@
+# Default owners for the repository
+* @org/maintainers
+
+# Protect workflow and governance files
+/.github/ @org/maintainers
+/.github/workflows/ @org/maintainers
+/CODEOWNERS @org/maintainers
+
+# Example app-specific ownership
+/src/api/ @org/backend
+/src/cli/ @org/platform
+/infra/ @org/platform

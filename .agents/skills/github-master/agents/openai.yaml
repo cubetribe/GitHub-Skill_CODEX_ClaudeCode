@@ -1,0 +1,13 @@
+interface:
+  display_name: "GitHub Master"
+  short_description: "GitHub workflow governance for small teams"
+  default_prompt: "Use $github-master to inspect this repository, enforce GitHub collaboration guardrails, and prepare a safe PR and release workflow."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "github"
+      description: "GitHub repository, issue, and pull request operations"
+
+policy:
+  allow_implicit_invocation: true
